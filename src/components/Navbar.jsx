@@ -46,7 +46,7 @@ const Navbar = () => {
           </ul>
           <ul>
             {
-            (!showAll) ? <li onClick={handleShow} className="extra_genre">Show More <FontAwesomeIcon icon={faPlus} style={{color: "#63e6be",}} /></li>: <ul className="genre">{(genreAll).map((single)=>{
+            (!showAll) ? <li onClick={handleShow} className="extra_genre">Show More <FontAwesomeIcon icon={faPlus} style={{color: "#74c0fc",}} /></li>: <ul className="genre">{(genreAll).map((single)=>{
                 return <li className="genreCompartment extra">{single}</li>
               })}
               </ul>

@@ -127,7 +127,7 @@
   color: #17ecb0;
 }
 .extra_genre{
-  color:#17ecb0;
+  color:rgb(5, 153, 245);
   cursor: pointer;
   /* border: 2px solid red; */
   display: flex;
