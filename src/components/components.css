@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+.navbar {
+  height: 70px;
+  width: 100%;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  background-color: #2a2c31;
+  position: relative;
+}
+.menu-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 220px;
+    /* border: 1px solid white; */
+}
+.menu{
+    filter: invert();
+    border: none;
+    background-color: transparent;
+}
+.menu:hover, .logo:hover{
+    cursor: pointer;
+}
+.sidebar{
+  position: absolute;
+  top: 0;
+  height: max-content;
+  width: 250px;
+  background-color: #2a2c31;
+  /* border: 1px solid red; */
+  padding: 20px;
+
+}
+.visible{
+  animation: LeftToRight 0.2s linear forwards;
+}
+.invisible{
+  animation: rightToLeft 0.2s linear forwards;
+}
+
+@keyframes LeftToRight {
+  from {transform: translateX(-250px);}
+  to {transform: translateX(0);}
+}
+@keyframes rightToLeft {
+  from {transform: translateX(0);}
+  to {transform: translateX(-250px);}
+}
+.genreCompartment{
+  font-size: 0.8rem;
+  width: 105px;
+  height: 30px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  /* align-items:end; */
+  color: #17ecb0;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+.genreCompartment:hover{
+  color: rgb(5, 153, 245)
+}
+/* sidebar */
+.sidebar-button{
+  height: 40px;
+  width: 150px;
+  background-color: #4a4b51;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.sidebar-button:hover{
+  cursor: pointer;
+}
+.sidebar-button-donate{
+  background-color: #00ffb7;
+}
+.sidebar-button-community{
+  background-color: #4a4b51;
+  color: white
+}
+.sidebar-button-donate, .sidebar-button-community{
+  margin-top: 10px;
+  width: 220px;
+  height: 36px;
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.donate_comm{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.singleCompartment{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  color: white;
+  border-bottom: 1px solid grey;
+
+}
+.singleCompartment:hover{
+  color: #00ffb7;
+  cursor: pointer;
+}
+.genre{
+  display: flex;
+  flex-wrap: wrap;
+  color: #17ecb0;
+}
+.extra{
+  color:rgb(5, 153, 245)
+}
+.extra:hover{
+  color: #17ecb0;
+}
+.extra_genre{
+  color:#17ecb0;
+  cursor: pointer;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
