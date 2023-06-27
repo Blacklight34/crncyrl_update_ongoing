@@ -1,17 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import { arr, genre, genreAll } from "../assets/constants";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faComments, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowLeft,
+  faComments,
+  faPlus,
+  faMagnifyingGlass,
+  faSignal
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const [showAll, setShowAll] = useState(false);
+  const [search, setSearch] = useState("")
   const handleClick = () => {
     setVisible(!visible);
   };
   const handleShow = () => {
     setShowAll(!showAll);
+  };
+  const handleChange = (e) => {
+    setSearch(e.target.value);
   }
   return (
     <div className="navbar">
@@ -24,40 +34,60 @@ const Navbar = () => {
             alt="menu--v1"
           />
         </button>
-        <div className={(visible) ? "sidebar visible" : "sidebar invisible"}>
-          <button className="sidebar-button" onClick={handleClick}> <FontAwesomeIcon icon={faArrowLeft} /> Close Sidebar</button>
+
+        <div className={visible ? "sidebar visible" : "sidebar invisible"}>
+          <button className="sidebar-button" onClick={handleClick}>
+            {" "}
+            <FontAwesomeIcon icon={faArrowLeft} /> Close Sidebar
+          </button>
           <div className="donate_comm">
             <button className="sidebar-button-donate">Donate</button>
-            <button className="sidebar-button-community"><FontAwesomeIcon icon={faComments} style={{color: "#41e614",}} /> Community</button>
+            <button className="sidebar-button-community">
+              <FontAwesomeIcon icon={faComments} style={{ color: "#41e614" }} />{" "}
+              Community
+            </button>
           </div>
           <ul>
-            {
-              (arr).map((single)=>{
-                return <li className="singleCompartment">{single}</li>
-              })
-            }
+            {arr.map((single) => {
+              return <li className="singleCompartment">{single}</li>;
+            })}
           </ul>
           <ul className="genre">
-            {
-              (genre).map((single)=>{
-                return <li className="genreCompartment">{single}</li>
-              })
-            }
+            {genre.map((single) => {
+              return <li className="genreCompartment">{single}</li>;
+            })}
           </ul>
           <ul>
-            {
-            (!showAll) ? <li onClick={handleShow} className="extra_genre">Show More <FontAwesomeIcon icon={faPlus} style={{color: "#74c0fc",}} /></li>: <ul className="genre">{(genreAll).map((single)=>{
-                return <li className="genreCompartment extra">{single}</li>
-              })}
+            {!showAll ? (
+              <li onClick={handleShow} className="extra_genre">
+                Show More{" "}
+                <FontAwesomeIcon icon={faPlus} style={{ color: "#74c0fc" }} />
+              </li>
+            ) : (
+              <ul className="genre">
+                {genreAll.map((single) => {
+                  return <li className="genreCompartment extra">{single}</li>;
+                })}
               </ul>
-              
-            }
+            )}
           </ul>
-
         </div>
         <img className="logo" width="130" height="40" src={logo} />
       </div>
-      
+      <div className="search_socials">
+        <div className="search">
+          <input type="text" placeholder="Search anime..." onChange={handleChange}></input>
+          <div className="icon_filter">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <button>Filter</button>
+          </div>
+        </div>
+        <div className="socials">
+              <button>Twitter</button>
+              <button>Discord</button>
+              <button>Reddit</button>
+        </div>
+      </div>
     </div>
   );
 };

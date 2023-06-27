@@ -1,12 +1,13 @@
 import React from "react"
 import Navbar from "./Navbar.jsx"
 import "./components.css"
+import Carousal from "./Carousal.jsx";
 const Homepage = () => {
   return (
     <div>
       <Navbar />
-
-      homepage
+      <Carousal />
+      {/* homepage */}
     </div>
   );
 };

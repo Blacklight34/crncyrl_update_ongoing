@@ -32,8 +32,9 @@
 .sidebar{
   position: absolute;
   top: 0;
+  left:0;
   height: max-content;
-  width: 250px;
+  width: 270px;
   background-color: #2a2c31;
   /* border: 1px solid red; */
   padding: 20px;
@@ -47,12 +48,12 @@
 }
 
 @keyframes LeftToRight {
-  from {transform: translateX(-250px);}
+  from {transform: translateX(-270px);}
   to {transform: translateX(0);}
 }
 @keyframes rightToLeft {
   from {transform: translateX(0);}
-  to {transform: translateX(-250px);}
+  to {transform: translateX(-270px);}
 }
 .genreCompartment{
   font-size: 0.8rem;
@@ -76,7 +77,11 @@
   background-color: #4a4b51;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+.sidebar-button:hover{
+  cursor: pointer;
+  background-color: #4a4b51de;
 }
 .sidebar-button:hover{
   cursor: pointer;
@@ -133,4 +138,134 @@
   display: flex;
   align-items: center;
   gap: 3px;
+}
+
+
+/* Carousal */
+.carousal_main_body{
+  height: 550px;
+  width: 100vw;
+  /* border: 2px solid green; */
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  position: relative;
+}
+.cImages > img{
+  height: 100%;
+  width: 100vw;
+  z-index: 0;
+  opacity: 0.3;
+  /* object-fit: cover; */
+}
+.cImages{
+  position: relative;
+  display: flex;
+}
+.navigation_carousal{
+  position: absolute;
+  /* z-index: -1; */
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.navigation_carousal > button{
+  height: 30px;
+  width: 30px;
+  background-color:  #2a2c31;
+  border: none;
+  border-radius: 3px;
+}
+.navigation_carousal > button:hover{
+  cursor: pointer;
+}
+.anime-carousal-data{
+  width: 70vw;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  padding: 20px;
+}
+.anime-carousal-data-title{
+  font-size: 4rem;
+  color: white
+}
+.anime-carousal-data-desc{
+  color: white;
+  opacity: 0.6;
+}
+.anime-carousal-data > div{
+  display: flex;
+  gap: 10px;
+}
+.anime-carousal-data > div > button{
+  background-color: #00ffb7;
+  height: 40px;
+  width: 150px;
+  color: black;
+  border: none;
+  border-radius: 20px;
+}
+
+.search{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 7px 0px 7px;
+  align-items: center;
+  /* padding: 5px; */
+  height: 40px;
+  width: 320px;
+  /* border: 2px solid red; */
+  background-color: white;
+}
+.search > input{
+  background-color: white;
+  width:220px;
+  border: none
+}
+.search > input:focus{
+  outline: none;
+}
+.icon_filter{
+  display: flex;
+  /* border: 2px solid red; */
+  width: 80px;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.icon_filter > button{
+  background-color: #4a4b51;
+  color: white;
+  border: none;
+  padding: 5px;
+}
+.icon_filter > button:hover{
+  cursor: pointer;
+}
+.search_socials{
+  /* border: 2px solid red; */
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socials{
+  display: flex;
+  gap: 5px;
+}
+.socials > button{
+  background-color: #17ecb0;
+  color: black;
+  border: none;
+  padding: 3px;
+  border-radius: 4px;
+}
+.socials > button:hover{
+  cursor: pointer;
 }
