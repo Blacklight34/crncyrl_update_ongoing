@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightLong, faCirclePlay, faHardDrive } from "@fortawesome/free-solid-svg-icons";
 import { faLeftLong } from "@fortawesome/free-solid-svg-icons";
 const Carousal = () => {
+  
   const [current, setCurrent] = useState(0);
   const [nextToCurrent, setNextToCurrent] = useState(0)
   const handlePrev = () => {
