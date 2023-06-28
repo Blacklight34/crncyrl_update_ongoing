@@ -37,6 +37,7 @@
   width: 270px;
   background-color: #2a2c31;
   /* border: 1px solid red; */
+  z-index: 1;
   padding: 20px;
 
 }
@@ -150,21 +151,25 @@
   background-color: black;
   justify-content: center;
   position: relative;
+
 }
 .cImages > img{
   height: 100%;
   width: 100vw;
   z-index: 0;
   opacity: 0.3;
+  box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+
   /* object-fit: cover; */
 }
 .cImages{
   position: relative;
   display: flex;
+  /* z-index: -1; */
 }
 .navigation_carousal{
   position: absolute;
-  /* z-index: -1; */
+  z-index: -1;
   bottom: 10px;
   right: 10px;
   display: flex;

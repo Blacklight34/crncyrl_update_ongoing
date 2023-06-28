@@ -18,9 +18,6 @@ const Carousal = () => {
       setNextToCurrent(((current + 1) % CarousalImages.length)+1)
     }, 5000);
   };
-  useEffect(() => {
-    handleTimer();
-  });
   return (
     <div className="carousal_main_body">
       <div className="cImages">
