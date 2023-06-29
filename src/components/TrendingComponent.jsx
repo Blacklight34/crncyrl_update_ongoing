@@ -28,7 +28,7 @@ const TrendingComponent = () => {
   }, []);
   return (
     <div className="popular">
-      <h2>
+      <h2 className="heading">
         Trending
         <FontAwesomeIcon icon={faStar} style={{ color: "#ffea00" }} />
       </h2>
