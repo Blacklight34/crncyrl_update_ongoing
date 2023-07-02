@@ -5,6 +5,7 @@ import Carousal from "./Carousal.jsx";
 import TrendingComponent from "./TrendingComponent.jsx";
 import CommentSection from "./Comments.jsx";
 import Bifurcation from "./Bifurcation.jsx";
+import AllAnime from "./AllAnime.jsx";
 const Homepage = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const Homepage = () => {
       <TrendingComponent />
       <CommentSection/>
       <Bifurcation />
+      <AllAnime />
     </div>
   );
 };
